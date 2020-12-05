@@ -20,18 +20,21 @@ $(function(){
                 type:'POST',
                 data:data,
                 success:function(res){
-                    if(res.status==0){
-                        
-                        location.href='./index.html'
+                    console.log(res);
+                    if(res.status===0){
+                       localStorage.setItem('token',res.token) 
+                       //console.log(res.token);
+                       location.href='./index.html'
                         layer.msg(res.message)
                     }else{
 
                         //表单提交后 清空
-                        $('.layui-form')[0].reset()
+                      
                        return layer.msg(res.message)
                        
                     
                     }
+                    $('.layui-form')[0].reset()
     
                 }
     
