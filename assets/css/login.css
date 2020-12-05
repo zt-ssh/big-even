@@ -42,9 +42,10 @@ html, body {
   position: absolute;
   left: 10px;
   top: 10px;
+
 }
 
-.layui-input {
+.layui-form-item .layui-input {
   padding-left: 30px;
 }
 
